@@ -1,0 +1,18 @@
+section {
+  display: grid;
+}
+.staff {
+  grid-row-start: 1;
+}
+.goalkeepers {
+  grid-row-start: 2;
+}
+.defensers {
+  grid-row-start: 3;
+}
+.middles {
+  grid-row-start: 4;
+}
+.strikers {
+ grid-row-start: 5;
+} 
