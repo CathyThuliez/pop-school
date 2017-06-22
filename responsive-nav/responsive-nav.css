@@ -8,7 +8,7 @@ nav {
 }
 
 div:hover {
-  background-color: gold;
+  background-color: purple;
 }
 
 @media (max-width: 640px) {
