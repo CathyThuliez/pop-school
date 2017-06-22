@@ -1,0 +1,7 @@
+picture {
+  display: block;
+  float: left;
+}
+picture img {
+  max-width: 100%;
+}

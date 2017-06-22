@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html language="fr">
+
+<head>
+ <meta charset="UTF-8"/>
+ <!--dit au navigateur que la page doit utiliser toute la largeur disponible et d'utiliser le zoom par défaut
+ (pour les smartphones)-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <!--pour résoudre un problème avec internet explorer-->
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+ <!-- La balise "title" est obligatoire -->
+ <title>Document</title>
+
+ <link href="picture-try.css" type="text/css" rel="stylesheet" />
+
+
+ </head>
+ <body>
+
+  <picture>
+    <source srcset="img/Eglise-Lievin04.jpg" media="(min-width: 1280px)">
+    <img src="img/small-Eglise-Lievin04.jpg" alt="Photo de l'église de Liévin">
+  </picture>
+
+  <picture>
+    <source srcset="img/mairie-lievin.jpg" media="(min-width: 1280px)">
+    <img src="img/small-mairie-lievin.jpg" alt="Photo de la mairie de lievin">
+  </picture>
+
+  <picture>
+    <source srcset="img/Lens-fosse-4.jpg" media="(min-width: 1280px)">
+    <img src="img/small-Lens-fosse-4.jpg" alt="Photo de lens fosse 4">
+  </picture>
+
+  <picture>
+    <source srcset="img/lievin-may-1918.jpg" media="(min-width: 1280px)">
+    <img src="img/small-lievin-may-1918.jpg" alt="Photo de lievin">
+  </picture>
+
+  <picture>
+    <source srcset="img/monument-lievin.jpg" media="(min-width: 1280px)">
+    <img src="img/small-monument-lievin.jpg" alt="Photo du monument de lievin">
+  </picture>
+
+</body>
+</html>
