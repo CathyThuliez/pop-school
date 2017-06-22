@@ -1,8 +1,8 @@
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: pink;
-  color: purple;
+  background-color: darkorchid;
+  color: yellow;
   font-weight: bold;
   font-family: sans;
 }
