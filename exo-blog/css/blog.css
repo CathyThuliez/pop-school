@@ -1,0 +1,28 @@
+body {
+  background-color: #b6335d;
+  color: white;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  background-color: pink;
+  color: purple;
+  font-weight: 600;
+  text-align: center;
+}
+
+.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: right;
+}

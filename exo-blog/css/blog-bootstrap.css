@@ -1,0 +1,62 @@
+body {
+  background-color: #b6335d;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  background-color: #b6335d;
+  color: purple;
+  font-weight: 600;
+  text-align: center;
+}
+
+header {
+  background-color: lightpink;
+}
+
+.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  color: darkgray;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: right;
+}
+
+.container {
+  background-color: pink;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.col-sm-12 {
+  background-color: lightpink;
+  padding-bottom: 30px;
+}
+
+.col-sm-6 {
+  background-color: lightpink;
+  padding-bottom: 30px;
+}
+
+.col-lg-4{
+  background-color: lightpink;
+  padding-bottom: 30px;
+}
+
+.col-md-4 {
+  background-color: lightpink;
+  padding-bottom: 30px;
+}
