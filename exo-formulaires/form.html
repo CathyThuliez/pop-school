@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"/>
+  <!--dit au navigateur que la page doit utiliser toute la largeur disponible et d'utiliser le zoom par défaut
+  (pour les smartphones)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--pour résoudre un problème avec internet explorer-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- La balise "title" est obligatoire -->
+  <title>Document</title>
+
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+  <!-- Méthode "post" empêche qu'on voit les données dans la barre d'url -->
+  <form action="" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="token" value="" />
+
+    <div>
+      <label for="firstname">Prénom *</label>
+    </div>
+    <div>  <!-- placeholder: montre ce que les users doivent entrer-->
+      <input type="text" id="firstname" name="firstname" value="" placeholder="prénom" required />
+    </div>
+
+    <div>
+      <label for="lastname">Nom *</label>
+    </div>
+    <div><!--required: rend un champ obligatoire-->
+      <input type="text" id="lastname" name="lastname" value="" placeholder="nom" required />
+    </div>
+
+    <div>
+      <label for="email">Email *</label>
+    </div>
+    <div>
+      <input type="email" id="email" name="email" value="" placeholder="Votre email" required />
+    </div>
+
+    <div>
+      <label for="birthday">Date de naissance</label>
+    </div>
+    <div><!--readonly: on peut seulement lire, aucune modif possible-->
+      <input type="date" id="birthday" name="birthday" value="" readonly />
+    </div>
+
+    <div>
+      <label for="password">Mot de passe</label>
+    </div>
+    <div>
+      <input type="password" id="password" name="password" value="" placeholder="Votre mot de passe" />
+    </div>
+
+    <div>
+      <label for="avatar">Avatar</label>
+    </div>
+    <div>
+      <input type="file" id="avatar" name="avatar" />
+    </div>
+
+    <div>
+      <label for="who_are_you">Qui êtes-vous ?</label>
+    </div>
+    <div>
+    <textarea id="who_are_you" name="who_are_you">I'm what I'm.</textarea>
+    </div>
+
+    <div>
+      <label for="files">Fichiers</label>
+    </div>
+    <div>
+      <input type="file" id="files" name="files[]" multiple />
+    </div>
+
+    <div>
+      <label>Quels fruits aimez-vous ?</label>
+    </div>
+    <div><!-- Les [] indiquent que le choix est multiple et "checked" coche d'office-->
+    <label>Mangue <input checked type="checkbox" id="fruit_1" name="fruits[]" value="1" /></label><br />
+    <label>Ananas <input checked type="checkbox" id="fruit_2" name="fruits[]" value="2" /></label><br />
+    <label>Papaye <input type="checkbox" id="fruit_3" name="fruits[]" value="3" /></label><br />
+  </div>
+
+  <div>
+    <label>Quel est votre légume préféré ?</label>
+  </div>
+  <div><!--Les [] indiquent que le choix est multiple -->
+  <label>Aucun <input type="radio" id="vegetable_0" name="vegetable" value="" /></label><br />
+  <label>Concombre<input type="radio" id="vegetable_1" name="vegetable" value="1" /></label><br />
+  <label>Poivron <input type="radio" id="vegetable_2" name="vegetable" value="2" /></label><br />
+  <label>Courgette<input type="radio" id="vegetable_3" name="vegetable" value="3" /></label><br />
+</div>
+
+
+<div>
+  <label for="color">Quel est votre couleur préférée ?</label>
+</div>
+<div>
+  <select id="color" name="color">
+    <option value="">Aucune</option>
+    <option value="1">Magenta</option>
+    <option value="2">Violet</option>
+    <option selected value="3">Rose</option>
+    <option value="4">Bleu</option>
+    <option value="5">Jaune</option>
+    <option value="6">Vert</option>
+    <<option value="7">Rouge</option>
+  </select>
+</div>
+
+<div>
+  <label>Quel sont vos jours préférés ?</label>
+</div>
+<div>
+    <select id="days" name="days[]" multiple size="5"><!-- Multiple size="5" pour les grandes listes, affiche seulement une partie et il faut scroller pour voir les autres propositions -->
+    <option value="1">Lundi</option>
+    <option value="2">Mardi</option>
+    <option selected value="3">Mercredi</option>
+    <option selected value="4">Jeudi</option>
+    <option value="5">Vendredi</option>
+    <option value="6">Samedi</option>
+    <option value="7">Dimanche</option>
+  </select>
+</div>
+
+<div>
+  <label for="cats">Nombre de chats</label>
+</div>
+<div><!--disabled: pour désactiver un champ. Il apparait grisé-->
+  <input type="number" id="cats" name="age" value="0" disabled />
+</div>
+
+<div>
+  <input type="submit" value="Valider" />
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"/>
+  <!--dit au navigateur que la page doit utiliser toute la largeur disponible et d'utiliser le zoom par défaut
+  (pour les smartphones)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--pour résoudre un problème avec internet explorer-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- La balise "title" est obligatoire -->
+  <title>Document</title>
+
+  <!-- <link href="css/style.css" type="text/css" rel="stylesheet" /> -->
+  <!-- <link href="css/blog-bootstrap.css" type="text/css" rel="stylesheet" /> -->
+  <link href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+
+</head>
+<body>
+  <!-- Méthode "post" empêche qu'on voit les données dans la barre d'url -->
+  <form method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="token" value="" />
+
+    <div class="container">
+      <div class="row">
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="firstname">Prénom *</label>
+          <div class="col-sm-10">
+            <!-- placeholder: montre ce que les users doivent entrer-->
+            <input type="text" id="firstname" name="firstname" value="" placeholder="prénom" required />
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label  class="col-sm-2 control-label" for="lastname">Nom *</label>
+            <div class="col-sm-10"><!--required: rend un champ obligatoire-->
+            <input type="text" id="lastname" name="lastname" value="" placeholder="nom" required />
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">Email *</label>
+            <div class="col-sm-10">
+            <input type="email" id="email" name="email" value="" placeholder="Votre email" required />
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="birthday">Date de naissance</label>
+            <div class="col-sm-10">  <!--readonly: on peut seulement lire, aucune modif possible-->
+            <input type="date" id="birthday" name="birthday" value="" readonly />
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="who_are_you">Qui êtes-vous ?</label>
+            <div class="col-sm-10">
+              <textarea id="who_are_you" name="who_are_you">I'm what I'm</textarea>
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="password">Mot de passe</label>
+            <div class="col-sm-10">
+            <input type="password" id="password" name="password" value="" placeholder="Votre mot de passe" />
+          </div>
+        </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="avatar">Avatar</label>
+            <div class="col-sm-10">
+            <input type="file" id="avatar" name="avatar" />
+          </div>
+        </div>
+
+          <div class="form-group">
+          <label class="col-sm-2 control-label" for="files">Fichiers</label>
+          <div class="col-sm-10">
+           <input type="file" id="files" name="files[]" multiple />
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Quels fruits aimez-vous ?</label>
+            <div class="col-sm-10"><!-- Les [] indiquent que le choix est multiple et "checked" coche d'office-->
+            <label><input checked type="checkbox" id="fruit_1" name="fruits[]" value="1" /> Mangue</label><br />
+            <label><input checked type="checkbox" id="fruit_2" name="fruits[]" value="2" /> Ananas</label><br />
+            <label><input type="checkbox" id="fruit_3" name="fruits[]" value="3" /> Papaye</label><br />
+          </div>
+        </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Quel est votre légume préféré ?</label>
+            <!--Les [] indiquent que le choix est multiple --><div class="col-sm-10">
+            <label><input type="radio" id="vegetable_0" name="vegetable" value="" /> Aucun</label><br />
+            <label><input type="radio" id="vegetable_1" name="vegetable" value="1" /> Concombre</label><br />
+            <label><input type="radio" id="vegetable_2" name="vegetable" value="2" /> Poivron</label><br />
+            <label><input type="radio" id="vegetable_3" name="vegetable" value="3" /> Courgette</label><br />
+          </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="color">Quel est votre couleur préférée ?</label>
+<div class="col-sm-10">
+            <select id="color" name="color">
+              <option value="">Aucune</option>
+              <option value="1">Rouge</option>
+              <option value="2">Vert</option>
+              <option selected value="3">Bleu</option>
+            </select>
+          </div>
+        </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Quel sont vos jours préférés ?</label>
+            <div class="col-sm-10">
+              <select id="days" name="days[]" multiple size="3"><!-- Multiple size="3" pour les grandes listes, affiche seulement une partie et il faut scroller pour voir les autres propositions -->
+              <option value="1">Lundi</option>
+              <option value="2">Mardi</option>
+              <option selected value="3">Mercredi</option>
+              <option selected value="4">Jeudi</option>
+              <option value="5">Vendredi</option>
+              <option value="6">Samedi</option>
+              <option value="7">Dimanche</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="cats">Nombre de chats</label>
+        <!--disabled: pour désactiver un champ. Il apparait grisé--><div class="col-em-10">
+          <input type="number" id="cats" name="cats" value="0" disabled />
+        </div>
+      </div>
+
+
+        <div class="form-group">
+            <input type="submit" value="Valider" />
+        </div>
+      </div>
+    </div>
+
+
+
+  <script src="vendor/jquery/jquery-3.2.1.js"></script>
+
+  <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</form>
+</body>
+</html>

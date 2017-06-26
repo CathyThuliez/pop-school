@@ -1,0 +1,25 @@
+.fixed {
+  background-color: white;
+  box-sizing: border-box;
+  display: list-item;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*.fixed p {
+  margin: 0;
+}*/
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 640px;
+}
+
+article {
+  font-family: Bitstream Charter;
+  text-align: center;
+  }
