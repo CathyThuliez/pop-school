@@ -1,0 +1,16 @@
+#myDiv {
+border: solid black;
+width: 100px;
+}
+
+#myDiv div:nth-child(odd) {
+  background-color: purple;
+  height: 50px;
+  width: 50px;
+}
+
+#myDiv div:nth-child(even) {
+  background-color: yellow;
+  height: 50px;
+  width: 50px;
+}
