@@ -12,13 +12,14 @@
   <!-- La balise "title" est obligatoire -->
   <title>Exo</title>
 
-  <link href="css/exo-6.css" type="text/css" rel="stylesheet" />
-  <script type="text/javascript" src="js/script.js"></script>
+  <link href="css/exo-8bis.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="js/exo-8bis.js"></script>
 
 </head>
 <body>
+  <h1>Your name</h1>
+  <input type="text" onChange="console.log(myName);myName=this.value; document.getElementById('box').innerHTML='Your name is ' + myName;">
+  <div id="box"></div>
 
-  <button type="button" name="button" onclick="document.getElementById('myDiv').appendChild(document.createElement('div'));">Pouet</button>
-    <div id="myDiv" onClick="setRandomColor(this)"></div>
 </body>
 </html>

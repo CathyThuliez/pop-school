@@ -12,13 +12,16 @@
   <!-- La balise "title" est obligatoire -->
   <title>Exo</title>
 
-  <link href="css/exo-6.css" type="text/css" rel="stylesheet" />
-  <script type="text/javascript" src="js/script.js"></script>
+  <link href="css/exo-9.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="js/exo-9.js"></script>
 
 </head>
 <body>
+  <input type="number" id="number1">
+  <input type="number" id="number2">
 
-  <button type="button" name="button" onclick="document.getElementById('myDiv').appendChild(document.createElement('div'));">Pouet</button>
-    <div id="myDiv" onClick="setRandomColor(this)"></div>
+  <button onClick="document.getElementById('addition').innerHTML = addition(document.getElementById('number1').value, document.getElementById('number2').value)">Calculer</button>
+  <div id="addition"></div>
+
 </body>
 </html>
