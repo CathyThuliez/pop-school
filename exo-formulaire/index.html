@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"/>
+  <!--dit au navigateur que la page doit utiliser toute la largeur disponible et d'utiliser le zoom par défaut
+  (pour les smartphones)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--pour résoudre un problème avec internet explorer-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- La balise "title" est obligatoire -->
+  <title>Exo</title>
+
+  <link href="css/index.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="js/index.js"></script>
+  <link href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+
+</head>
+<body>
+  <h1>Qui es-tu ?</h1>
+  <div class="container">
+    <div class="row">
+      <div class="form-group">
+      <div class="col-sm-2">
+      Quel est ton prénom ?
+      </div>
+      <div class="col-sm-2">
+    <input type="text" id="firstname" placeholder="Prénom">
+      <br>
+    </div>
+        </div>
+      </div><!-- /.row -->
+      <div class="row">
+        <div class="form-group">
+          <div class="col-sm-2">
+        Quel est ton nom ?
+          </div>
+          <div class="col-sm-2">
+        <input type="text" id="lastname" placeholder="Nom">
+        <br>
+      </div>
+      </div><!-- /.form-groupe -->
+    </div><!-- /.row -->
+
+    <div class="row">
+      <div class="form-group">
+      <div class="col-sm-2">
+        Quel âge as-tu ?
+      </div>
+      <div class="col-sm-2">
+      <input type="number" id="age" placeholder="0">
+          <br>
+        </div>
+      </div><!-- /.form-groupe -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="form-group">
+          <div class="col-sm-2">
+            Quelle est ton adresse ?
+          </div>
+          <div class="col-sm-2">
+          <input type="text" class="addr" id="addr" placeholder="Adresse">
+            <br>
+        </div>
+        </div><!-- /.form-groupe -->
+        </div><!-- /.row -->
+
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-2">
+              Quel est ton film préféré ?
+            </div>
+            <div class="col-sm-2">
+            <input type="text" class="film" id="film" placeholder="Film préféré">
+              <br>
+          </div>
+          </div><!-- /.form-groupe -->
+          </div><!-- /.row -->
+
+          <div class="row">
+            <div class="form-group">
+              <div class="col-sm-2">
+                Quel est ton parfum préféré ?
+              </div>
+              <div class="col-sm-2">
+                <select id="parfum" name="parfum">
+                  <option value="">Aucun</option>
+                  <option value="Hypnotic poison">Hypnotic poison</option>
+                  <option value="Shalimar">Shalimar</option>
+                  <option value="La petite robe noire">La petite robe noire</option>
+                  <option value="Lolita Lempicka">Lolita Lempicka</option>
+                  <option value="La vie est belle<">La vie est belle</option>
+                  <option value="Trésor">Trésor</option>
+                </select>
+                <br>
+                <br>
+                <br>
+            </div>
+            </div><!-- /.form-groupe -->
+            </div><!-- /.row -->
+          </div><!-- /.container-->
+
+          <div class="container">
+            <div class="row">
+              <div class="form-group">
+                <div class="col-sm-4">
+            <button onClick="printForm()">Envoyer</button>
+            <br>
+            <br>
+            <div class="col-sm-12">
+            <div id="box"></div>
+          </div>
+          </div>
+          </div><!-- /.form-groupe -->
+          </div><!-- /.row -->
+      </div><!-- /.container-->
+
+      <script type="text/javascript" src="js/exo-8ter.js"></script>
+      <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+      <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

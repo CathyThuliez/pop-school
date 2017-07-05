@@ -1,7 +1,7 @@
 body {
   background-color: #b6335d;
   color: white;
-  text-align: center;
+  text-align: left;
 }
 
 h1 {
@@ -27,7 +27,6 @@ header {
 
 footer {
   color: darkgray;
-  font-style: italic;
   font-weight: bold;
   margin-top: 100px;
   text-align: right;
