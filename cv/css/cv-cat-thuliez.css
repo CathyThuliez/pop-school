@@ -3,6 +3,10 @@
   font-weight: bold;
 }
 
+.fa fa-angle-down fa-3x {
+  color: white;
+}
+
 h1 {
   margin-top: 70px;
   font-size: 70px;
@@ -26,10 +30,6 @@ h1, h2 {
   text-align: center;
 }
 
-.social-link {
-
-}
-
 .social-link a {
     height: 40px;
     width: 40px;
@@ -45,4 +45,8 @@ h1, h2 {
 
 .social-link a i {
     font-size: 20px;
+}
+
+h6 {
+  font-weight: bold;
 }
