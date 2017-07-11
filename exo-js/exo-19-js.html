@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"/>
+  <!--dit au navigateur que la page doit utiliser toute la largeur disponible et d'utiliser le zoom par défaut
+  (pour les smartphones)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--pour résoudre un problème avec internet explorer-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- La balise "title" est obligatoire -->
+  <title>Exo 19 js</title>
+
+  <link href="css/exo-19-js.css" type="text/css" rel="stylesheet" />
+  <link href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/exo-19-js.js"></script>
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+    <h1>Quel héros seras-tu ?</h1>
+    <div class="container">
+      <div class="row">
+        <div class="form-group">
+        <div class="col-sm-3">
+      Choisis ton nom de héros:
+        </div>
+        <div class="col-sm-2">
+      <input type="text" id="name" placeholder="Nom de héros">
+        <br>
+      </div>
+          </div>
+          <br>
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="form-group">
+          <div class="col-sm-3">
+        Compétences :
+          </div>
+          <div class="col-sm-2">
+  <input type="number" id="agility" placeholder="Agilité">
+  <input type="number" id="strength" placeholder="Force">
+  <input type="number" id="stamina" placeholder="Endurance">
+  <br>
+</div>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /.container -->
+<div class="container">
+  <div class="row">
+    <div class="form-group">
+      <div class="col-sm-4">
+  <button onClick="printForm()">Enregistrer</button>
+  <br>
+  <br>
+  <div class="col-sm-12">
+  <div id="box"></div>
+</div>
+</div>
+</div><!-- /.form-groupe -->
+</div><!-- /.row -->
+</div><!-- /.container-->
+
+
+</body>
+</html>

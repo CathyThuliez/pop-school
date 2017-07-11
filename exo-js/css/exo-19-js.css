@@ -1,0 +1,12 @@
+h1 {
+	background-color: darkorchid;
+	text-align: center;
+}
+
+.row {
+	text-align: center;
+}
+
+#box {
+	border: solid darkorchid;
+}
