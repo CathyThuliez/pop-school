@@ -1,3 +1,7 @@
+window.onload = function() {
+localStorage.getItem();
+}
+
 result = localStorage.getItem("result");
 console.log(localStorage.getItem("result"));
 
@@ -33,7 +37,7 @@ var printForm = function() {
     document.getElementById("strength").value,
     document.getElementById("stamina").value,
   ];
-  
+
 }
 else {
   var box = document.getElementById("box");

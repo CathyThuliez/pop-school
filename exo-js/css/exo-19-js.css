@@ -9,4 +9,13 @@ h1 {
 
 #box {
 	border: solid darkorchid;
+	height: 100px;
+	width: 200px;
+}
+
+#box2 {
+	border: solid purple;
+	height:100px;
+	width: 200px;
+	/*display: none;*/
 }
