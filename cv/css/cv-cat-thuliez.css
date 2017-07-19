@@ -18,9 +18,9 @@ h1 {
 }
 
 .background {
+  background-attachment: fixed;
   background: no-repeat center/100% url(../img/header.jpg);
   height: 700px;
-  background-attachment: fixed;
   padding-top: 100px;
 }
 
