@@ -1,5 +1,26 @@
 "use strict";
 
+var index = 0;
+while (index < 10) {
+  console.log("ok");
+  index++;
+}
+// même chose mais codée différemment :
+for (var index = 0; index < 10; index++) {
+  console.log("ok");
+}
+// une seule fois
+do {
+  console.log("ok");
+} while (false);
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+
 var myArray = [123, 42, 3.14, 100, 1, -2];
 
 // boucle for avec un index

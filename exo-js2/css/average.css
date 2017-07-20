@@ -1,0 +1,11 @@
+table {
+  border: solid black;
+}
+
+tr {
+  border: solid grey;
+}
+
+td {
+  border: solid #c1b7b5;
+}
