@@ -11,7 +11,7 @@ var data = [
     name: "kimiko",
     scores: [42, 100, 54, 65,32]
   },
-{
+  {
     id: 768,
     name: "kakashi",
     scores: [93, 2, 56, 78, 100]
@@ -40,16 +40,18 @@ var data = [
 // exemple de création de code html en js et injection du code dans un élément
 // var data = [];
 window.onload = function() {
-  var html = "";
+  var html;
   html = "<table>";
-    data.sort(function(a, b) {
-  if (a.name.toUpperCase() < b.name.toUpperCase())
-     return -1;
-  if (a.name.toUpperCase() > b.name.toUpperCase())
-     return 1;
-  // a doit être égal à b
-  return 0;
-});
+
+  data.sort(function(a, b) {
+    if (a.name.toUpperCase() < b.name.toUpperCase())
+    return -1;
+    if (a.name.toUpperCase() > b.name.toUpperCase())
+    return 1;
+    // a doit être égal à b
+    return 0;
+  });
+
   for (var i = 0; i < data.length; i++) {
 
     html += "<tr>";
@@ -58,8 +60,32 @@ window.onload = function() {
     html += "</tr>";
   }
   html += "</table>";
-
   document.querySelector("#list").innerHTML = html;
-  document.querySelector("#list-average").innerHTML += "";
+
+  var usersAverageScores = [];
+  for (var user of data){
+    var sum = 0;
+
+    for (var score of user.scores) {
+      sum += score;
+    }
+    let average = sum / user.scores.length;
+    usersAverageScores.push( {
+      name: user.name,
+      averageScore: average
+    });
+  }
+
+  html = "<table>";
+  for (var user of usersAverageScores) {
+    html += "<tr>";
+    html += "<td>" + user.name + "</td>";
+    html += "<td>" + user.averageScore + "</td>";
+    html += "</tr>";
+  }
+  html += "</table>";
+  document.querySelector("#list-average").innerHTML += html;
+
+
   document.querySelector("#list-best-scores").innerHTML += "";
 }

@@ -1,11 +1,15 @@
 table {
-  border: solid black;
+  border: solid purple;
 }
 
 tr {
-  border: solid grey;
+  color: darkorchid;
+}
+td {
+  border: solid magenta;
+  
 }
 
-td {
-  border: solid #c1b7b5;
+tr, td {
+  background-color: pink;
 }
