@@ -7,8 +7,8 @@ tr {
 }
 td {
   border: solid magenta;
-  
-}
+  width: 300px;
+  }
 
 tr, td {
   background-color: pink;

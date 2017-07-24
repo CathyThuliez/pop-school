@@ -40,16 +40,19 @@ var data = [
 // exemple de création de code html en js et injection du code dans un élément
 // var data = [];
 window.onload = function() {
+  // premier tableau : user trié par ordre alphabétique
   var html;
   html = "<table>";
 
   data.sort(function(a, b) {
-    if (a.name.toUpperCase() < b.name.toUpperCase())
-    return -1;
-    if (a.name.toUpperCase() > b.name.toUpperCase())
-    return 1;
+    if (a.name.toUpperCase() < b.name.toUpperCase()) {
+      return -1;
+    }
+    if (a.name.toUpperCase() > b.name.toUpperCase()) {
+      return 1;
+    }
     // a doit être égal à b
-    return 0;
+      return 0;
   });
 
   for (var i = 0; i < data.length; i++) {
@@ -62,6 +65,7 @@ window.onload = function() {
   html += "</table>";
   document.querySelector("#list").innerHTML = html;
 
+  // deuxième tableau : trié par ordre alphabétique + calcul de la moyenne de chaque user
   var usersAverageScores = [];
   for (var user of data){
     var sum = 0;
@@ -86,6 +90,27 @@ window.onload = function() {
   html += "</table>";
   document.querySelector("#list-average").innerHTML += html;
 
+  // troisième tableau : 5 meilleurs scores, triés par ordre alphabétique + décroissant.
+  var bestScores = [];
 
-  document.querySelector("#list-best-scores").innerHTML += "";
+  for (var user of data){
+    for (var score of user.scores){
+      bestScores.push({
+        name: user.name,
+        score: score,
+      });
+    }
+  };
+
+  html = "<table>";
+  for (var user of bestScores) {
+    html += "<tr>";
+    html += "<td>" + user.name + "</td>";
+    html += "<td>" + user.score + "</td>";
+    html += "</tr>";
+  }
+  html += "</table>";
+
+
+  document.querySelector("#list-best-scores").innerHTML += html;
 }
