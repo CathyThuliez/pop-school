@@ -101,20 +101,23 @@ window.onload = function() {
       });
     };
   };
+
+  //bon, là on a donc notre tableau avec tous les scores. Pour avoir l'ordre souhaité, il faut d'abord les classer par ordre alphabetique, puis par score decroissant.
+
+  //ça marche pas pour l'odre alphabetique, je capte pas trop pourquoi...
   function compare(a,b){
-    if (a.score===b.score){
-       return (a.name-b.name);
-    } else if(a.score<b.score){
-      return 1;
-    } else if(a.score>b.score){
-      return -1;
-    }
-  };
+  //   if (a.score===b.score){
+  //         //  return (a.name-b.name);
+  //       } else if(a.score<b.score){
+  //          return 1;
+  //       } else if(a.score>b.score){
+  //          return -1;
+  //       }
+  // };
 
   function compareScores(a, b) {
     return b.score - a.score;
   };
-
 
   allScores.sort(compare)
   console.table(allScores);
@@ -127,6 +130,9 @@ window.onload = function() {
   for (var i = 0 ; i < 5 ; i++){
     bestScores.push(allScores[i]);
   };
+
+
+  //bon voilà. Maintenant il faut rajouter ces valeurs dans notre HTML
   console.table(bestScores);
   for (var i = 0; i < bestScores.length; i++) {
     html += "<tr>";
@@ -135,5 +141,7 @@ window.onload = function() {
     html += "</tr>";
   }
   html += "</table>";
+
+
   document.querySelector("#list-best-scores").innerHTML += html;
 }
