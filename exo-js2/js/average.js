@@ -18,29 +18,9 @@ var data = [
   }
 ];
 
-// Intégrer bootstrap
-// A partir de ces données :
-// - afficher un tableau html contenant le nom des users et leurs scores
-// - afficher un autre tableau html contenant le noms des users et leur score moyen, triés par nom de user
-// - afficher un tableau html contenant les 5 meilleurs scores et le nom de l'user, triés par ordre décroissant et par nom de user
-// indice :
-// pour lire le user name :
-//               - boucle for avec index : data[i].name
-//               - boucle for in : data [].name
-//               - boucle for of : user.name
-//
-// pour lire le tableau des scores :
-//               - boucle for avec index : data[i].scores
-//               - boucle for in : data[].scores
-//               - boucle for of : user.scores
-
-// vous pouvez parcourir le tableau avec une boucle for (avec index, for in, for of)
-// -------------------------------------------------------------------------------------------------------
-
 // exemple de création de code html en js et injection du code dans un élément
-// var data = [];
 window.onload = function() {
-  // premier tableau : user trié par ordre alphabétique
+// premier tableau : user trié par ordre alphabétique
   var html;
   html = "<table>";
 
@@ -51,7 +31,6 @@ window.onload = function() {
     if (a.name.toUpperCase() > b.name.toUpperCase()) {
       return 1;
     }
-    // a doit être égal à b
     return 0;
   });
 
@@ -65,7 +44,7 @@ window.onload = function() {
   html += "</table>";
   document.querySelector("#list").innerHTML = html;
 
-  // deuxième tableau : trié par ordre alphabétique + calcul de la moyenne de chaque user
+// deuxième tableau : trié par ordre alphabétique + calcul de la moyenne de chaque user
   var usersAverageScores = [];
   for (var user of data){
     var sum = 0;
@@ -90,7 +69,7 @@ window.onload = function() {
   html += "</table>";
   document.querySelector("#list-average").innerHTML += html;
 
-  // troisième tableau : 5 meilleurs scores, triés par ordre alphabétique + décroissant.
+// troisième tableau : 5 meilleurs scores, triés par ordre alphabétique + décroissant.
   var allScores = [];
   html = "<table>";
   for (var user of data){
@@ -118,9 +97,7 @@ window.onload = function() {
 
   allScores.sort(compare)
   console.table(allScores);
-  //on a donc les scores triés par ordre décroissant, maintenant il nous faudrait isoler les 5 meilleurs.
 
-  //on crée notre variables bestscores,
   var bestScores = [];
 
   //on va ajouter les 5 premieres valeurs du tableau Scores, donc les meilleurs scores.
